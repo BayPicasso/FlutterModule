@@ -12,25 +12,26 @@
     }
 
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #a5e4c1;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 40px 20px;
-    }
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #a5e4c1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  flex-wrap: wrap; /* agar bisa ke samping dan turun jika sempit */
+  gap: 40px;        /* Jarak antar elemen timeline-wrapper */
+}
 
     .timeline-wrapper {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 1);
-      padding: 40px 30px;
-      max-width: 900px;
-      width: 100%;
-      position: relative;
-    }
-
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 1);
+  padding: 40px 30px;
+  width: 48%;       /* ubah dari 100% agar cukup 2 kolom */
+  min-width: 380px; /* batas minimum agar tetap responsif */
+  position: relative;
+}
     .timeline-header {
       text-align: center;
       margin-bottom: 40px;
@@ -140,8 +141,8 @@
     <!--TIMELINE 1-->
   <div class="timeline-wrapper">
     <div class="timeline-header">
-      <h2 style="font-weight: bold;">Purchasing Request Tutorial</h2>
-      <p>intine PR kui digawe masing masing department (user) dinggo jaluk pembelian.</p>
+      <h2 style="font-weight: bold;">Store Requisition Tutorial</h2>
+      <p>SR kui permintaan barang seko department ke gudang/warehouse.</p>
     </div>
 
     <div class="timeline">
@@ -226,8 +227,9 @@
 
   <div class="timeline-wrapper">
     <div class="timeline-header">
-      <h2 style="font-weight: bold;">Purchasing Request Tutorial</h2>
-      <p>intine PR kui digawe masing masing department (user) dinggo jaluk pembelian.</p>
+      <h2 style="font-weight: bold;">Return Store Requisition Tutorial</h2>
+      <p>SR Return kui pengembalian barang seko department ke gudang/warehouse contohe front office kelebihan jaluk
+        barang, sisane di kembalikan.</p>
     </div>
 
     <div class="timeline">
