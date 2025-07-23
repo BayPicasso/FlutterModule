@@ -70,20 +70,29 @@
       text-decoration: none;
     }
 
+    .custom-btnback {
+      font-weight: bold;
+      transition: all 0.3s ease; /* Tambahkan transisi halus */
+    }
+
+    .custom-btnback:hover {
+      background-color: #ffffff;  /* warna saat hover */
+      transform: scale(1.20);     /* efek zoom sedikit */
+      box-shadow: 0 5px 10px rgb(140, 232, 255); /* bayangan lebih tebal */
+    }
+
   </style>
 </head>
 <body>
 
   <div class="header">
     <!-- Tempat logo software kamu -->
-    <img src="submodule/image/kaliiniserius.PNG" alt="Logo Software">
-    <h1>bersiaplah</h1>
+    <!--<img src="submodule/image/kaliiniserius.PNG" alt="Logo Software">-->
+    <h1>Module Tutorial</h1>
   </div>
 
   <a href="" class="kartu">
   <div class="card-section">
-    <h5 style="text-align: center; color: aliceblue;">On Progress</h5>
-    <br>
     <div class="feature-card">
       <h4>Oprasional</h4>
       <p>Front Office, POS, Housekeeping.</p>
@@ -105,24 +114,21 @@
     </a>
 
     <a href="" class="kartu">
-      <h5 style="text-align: center; color: aliceblue;">On Progress</h5>
-    <br>
     <div class="feature-card">
       <h4>Other</h4>
       <p>Settings, Master Data etc.</p>
     </div>
     </a>
 
-    <a href="https://chatgpt.com/">
-    <div>
-    <button type="button" class="btn btn-success">
-      <h6 style="text-align: center;">Penyelamat kita semua</h6>
-    </button>
-    </div>
-    </a>
-
   </div>
 
+  <div class="card-section">
+    <a href="https://chatgpt.com/">
+    <button type="button" class="btn btn-light custom-btnback" style="font-weight: bold; color: #2f7762;">
+      Penyelamat kita
+    </button>
+    </a>
+  </div>
   
 
   <!-- Bootstrap JS -->
