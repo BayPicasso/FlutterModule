@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Online Approval</title>
@@ -37,9 +37,10 @@
     }
 
     .timeline-header h2 {
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       font-size: 24px;
       color: #333;
+      font-weight: bold;
     }
 
     .timeline-header p {
@@ -47,91 +48,61 @@
       color: #555;
     }
 
-    .timeline {
-      position: relative;
-    }
-
-    .timeline::before {
-      content: "";
-      position: absolute;
-      width: 2px;
-      background: #0dd15f;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
     .timeline-event {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
       margin: 40px 0;
-      position: relative;
+      text-align: left;
     }
 
     .timeline-content {
-      width: 40%;
-      font-size: 14px;
-      color: #444;
+      max-width: 600px;
+      width: 100%;
     }
 
     .timeline-content h4 {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       font-size: 16px;
       color: #222;
+      font-weight: bold;
     }
 
     .timeline-content img {
+      display: block;
+      margin: 0 auto 15px auto;
+      max-width: 500px; /* semua gambar seragam */
       width: 100%;
       height: auto;
       border-radius: 8px;
-      margin-bottom: 10px;
     }
 
-    .timeline-dot {
-      width: 20px;
-      height: 20px;
-      background: #0dd15f;
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      z-index: 1;
+    .timeline-content p {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 5px;
     }
 
     .custom-btnback {
-    color: #448996;         /* warna teks */
-    border-color: #448996;  /* warna border */
-    transition: transform 0.3s ease;
-  }
+      color: #448996;
+      border-color: #448996;
+      transition: transform 0.3s ease;
+    }
 
-  .custom-btnback:hover {
-    background-color: #416866;
-    color: white;
-    transform: translateY(-5px);
-  }
+    .custom-btnback:hover {
+      background-color: #416866;
+      color: white;
+      transform: translateY(-5px);
+    }
 
-    /* ===== RESPONSIVE SECTION ===== */
+    .judullangkahcuy {
+      text-align: center;
+    }
+
+    /* Responsive */
     @media screen and (max-width: 768px) {
-      .timeline-event {
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-        padding-left: 25px;
-      }
-
-      .timeline-content {
-        width: 100%;
-        text-align: left !important;
-        margin-bottom: 20px;
-      }
-
-      .timeline::before {
-        left: 12px;
-      }
-
-      .timeline-dot {
-        margin: 10px 0;
-        align-self: center;
+      .timeline-content img {
+        max-width: 100%;
       }
     }
   </style>
@@ -146,95 +117,81 @@
 
     <div class="timeline">
       <div class="timeline-event">
-        <div class="timeline-content" style="text-align: right;">
-          <h4>Buka Module Approval</h4>
+        <div class="timeline-content">
+          <h4 class="judullangkahcuy">Buka Module Approval</h4>
           <img src="image/apv1.PNG" alt="Event 1 Image">
         </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content"></div>
       </div>
 
+      <br>
+
       <div class="timeline-event">
-        <div class="timeline-content"></div>
-        <div class="timeline-dot"></div>
         <div class="timeline-content">
-          <h4>Maka nanti Menu Utama dari Approval seperti ini</h4>
+          <h4 class="judullangkahcuy">Maka nanti Menu Utama dari Approval seperti ini</h4>
           <img src="image/apv2.PNG" alt="Event 2 Image">
-          <p>- Untuk melakukan Approve pada Transaksi pertama tama kita bisa masuk ke Outstanding</p>
-          <p>- Di Outstanding ini kita bisa melihat transaksi apa saja yang belum di Approve oleh kita</p>
-          <p>- Untuk melakukan Approve sebenarnya ada 2 cara</p>
+          <p>• Untuk melakukan Approve pada Transaksi pertama tama kita bisa masuk ke Outstanding</p>
+          <p>• Di Outstanding ini kita bisa melihat transaksi apa saja yang belum di Approve oleh kita</p>
+          <p>• Untuk melakukan Approve sebenarnya ada 2 cara</p>
         </div>
       </div>
 
+      <br>
+
       <div class="timeline-event">
-        <div class="timeline-content" style="text-align: right;">
-          <h4>Cara Pertama</h4>
-          <img src="image/apv3.PNG" alt="Event 1 Image">
-          <p>Kita bisa Checklist dulu untuk transaksi mana yang ini di Approve, untuk checklist kita bisa beberapa
-            transaksi sekaligus -
+        <div class="timeline-content">
+          <h4 class="judullangkahcuy">Cara Pertama</h4>
+          <img src="image/apv3.PNG" alt="Event 3 Image">
+          <p>• Kita bisa Checklist dulu untuk transaksi mana yang ingin di Approve, dan untuk checklist kita bisa 
+            melakukannya ke beberapa
+            transaksi sekaligus
           </p>
-          <p>Lalu akan muncul Menu dibawah yaitu : -</p>
-          <p>Approve untuk menyetujui -</p>
-          <p>Reject untuk menolak -</p>
-          <p>Return untuk mengembalikan -</p>
-          <p>Return disini maksudnya transaksi yang di return akan kembali ke Level Approval sebelumnya
-            atau akan kembali ke User yang membuat -</p>
+          <p>• Lalu akan muncul Menu dibawah yaitu</p>
+          <p>• Approve untuk menyetujui</p>
+          <p>• Reject untuk menolak</p>
+          <p>• Return untuk mengembalikan</p>
+          <p>• Return disini maksudnya transaksi yang di return akan kembali ke Level Approval sebelumnya
+            atau akan kembali ke User yang membuat</p>
         </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content"></div>
       </div>
 
+      <br>
+
       <div class="timeline-event">
-        <div class="timeline-content"></div>
-        <div class="timeline-dot"></div>
         <div class="timeline-content">
-          <h4>Cara Kedua</h4>
-          <img src="image/apv4.PNG" alt="Event 2 Image">
-          <p>- Untuk cara kedua ini kita bisa pilih dulu transaksinya lalu klik Tombol See Details</p>
-          <p>- Maka akan muncul popup untuk detail Item/Product dari transaksi itu</p>
-          <p>- Untuk Approve, Return, Reject kita bisa perhatikan tombol di kanan bawah</p>
+          <h4 class="judullangkahcuy">Cara Kedua</h4>
+          <img src="image/apv5.PNG" alt="Event 4 Image">
+          <br>
+          <img src="image/apv4.PNG" alt="Event 5 Image">
+          <p>• Untuk cara kedua ini kita bisa pilih dulu transaksinya lalu klik Tombol See Details</p>
+          <p>• Maka akan muncul popup untuk detail Item/Product dari transaksi itu</p>
+          <p>• Untuk Approve, Return, Reject kita bisa perhatikan tombol di kanan bawah</p>
         </div>
       </div>
 
-      <div class="timeline-event">
-        <div class="timeline-content" style="text-align: right;">
-          <h4>Di See Details kita juga bisa melakukan penyesuaian</h4>
-          <img src="image/apv4.PNG" alt="Event 1 Image">
-          <p>Kita bisa mengedit Qty (kuantiti) dari item itu dengan klik tombol Pensil -</p>
-          <p>Atau ingin mengcancel item itu dengan klik tombol Tong Sampah berwarna merah -</p>
-        </div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content"></div>
-      </div>
+      <br>
 
       <div class="timeline-event">
-        <div class="timeline-content"></div>
-        <div class="timeline-dot"></div>
         <div class="timeline-content">
-          <h4>Button</h4>
-          <img src="image/apv5.PNG" alt="Event 2 Image">
-          <p>- Ok, untuk penjelasan tombol tombol di bagian atas ini adalah</p>
-          <p>- Transaction Type kita bisa filter transaksi jenis apa yang ingin ditampilkan</p>
-          <p>- Replace for ini adalah untuk Approval pengganti, jadi semisal user Dept Head belum bisa mengapprove 
-            maka user SPV atau user lainnya bisa menggantikannya (tergantung settingan)</p>
-          <p>- Print From adalah tombol untuk Print Form dari transaksi yang dipilih</p>
-          <p>- Filter adalah tombol untuk memfilter transaksi apa yang ingin ditampilkan semisal ingin 
-            memunculkan transaksi dari Department tertentu</p>
+          <h4 class="judullangkahcuy">Di See Details kita juga bisa melakukan penyesuaian</h4>
+          <img src="image/apv4.PNG" alt="Event 5 Image">
+          <p>• Kita bisa mengedit Qty (kuantiti) dari item itu dengan klik tombol Pensil</p>
+          <p>• Atau ingin mengcancel item itu dengan klik tombol Tong Sampah berwarna merah</p>
         </div>
       </div>
-
     </div>
+
     <br>
-      <h5 style="text-align: center;">Done</h5>
-      <div class="w-100 text-end">
-  <a href="../module/oprationallogistic.html">
-    <button type="button" class="btn btn-outline-primary custom-btnback" style="font-weight: bold;">
-      Back
-    </button>
-  </a>
-</div>
+    <h5 style="text-align: center;">Done</h5>
+    <div class="w-100 text-end">
+      <a href="../module/oprationallogistic.html">
+        <button type="button" class="btn btn-outline-primary custom-btnback" style="font-weight: bold;">
+          Back
+        </button>
+      </a>
+    </div>
   </div>
+
   <!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
